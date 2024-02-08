@@ -4,6 +4,8 @@ pipeline {
         label 'AGENT-1'
         
     }
+     options {
+        timeout(time: 1, unit: 'HOURS') 
 }
     environment { 
         GREETING = 'Good Morning'
@@ -26,6 +28,7 @@ pipeline {
                 sh """
                 echo "shell script"
                 env
+                sleep 10
                 """
             }
         }
