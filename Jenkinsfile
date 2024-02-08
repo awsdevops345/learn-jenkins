@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                ssh """
+                sh """
                 echo "shell script"
                 env
                 """
