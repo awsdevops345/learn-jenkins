@@ -7,6 +7,7 @@ pipeline {
     }
      options {
         timeout(time: 1, unit: 'SECONDS') 
+        disableConcurrentBuilds()
     }
     environment { 
         GREETING = 'Good Morning'
